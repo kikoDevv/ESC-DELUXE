@@ -1,8 +1,9 @@
 @use "header.scss" as *;
+@use "body.scss" as *;
 body{
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
     margin-bottom: 800px;
-    // background-color: #0e0e1b;
+    background-color: white;
 }

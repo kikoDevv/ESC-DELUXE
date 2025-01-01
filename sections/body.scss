@@ -1,0 +1,23 @@
+.main {
+	.cardSection {
+		margin: 20px;
+		.card {
+			background-color: aquamarine;
+			max-width: fit-content;
+			.cardImg {
+				max-width: 30vw;
+			}
+			.cardInfo {
+				display: grid;
+				padding: 3px 10px 10px 10px;
+				.cardName {
+					margin: 0px;
+					font-weight: bold;
+				}
+				.stars-participents {
+					background-color: red;
+				}
+			}
+		}
+	}
+}

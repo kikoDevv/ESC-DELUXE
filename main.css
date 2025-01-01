@@ -99,6 +99,7 @@
   border: none;
   font-weight: bold;
   background-color: #0b71de;
+  color: white;
   cursor: pointer;
 }
 .main .upperSection .btnGroup div button:hover {
@@ -143,11 +144,34 @@
   border-radius: 50%;
 }
 
+.main .cardSection {
+  margin: 20px;
+}
+.main .cardSection .card {
+  background-color: aquamarine;
+  max-width: fit-content;
+}
+.main .cardSection .card .cardImg {
+  max-width: 30vw;
+}
+.main .cardSection .card .cardInfo {
+  display: grid;
+  padding: 3px 10px 10px 10px;
+}
+.main .cardSection .card .cardInfo .cardName {
+  margin: 0px;
+  font-weight: bold;
+}
+.main .cardSection .card .cardInfo .stars-participents {
+  background-color: red;
+}
+
 body {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
   margin-bottom: 800px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
