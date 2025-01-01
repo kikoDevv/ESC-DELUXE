@@ -80,4 +80,73 @@
 	}
 }
 //-------------------main-------------------
-
+.main {
+	.upperSection {
+		img {
+			max-width: 100%;
+		}
+		.btnGroup {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			div {
+                position: absolute;
+                max-width: fit-content;
+                overflow: hidden;
+                border-radius: 10px;
+                top: -26px;
+                box-shadow: wheat 0px 0px 10px 0.9px;
+				button {
+					padding: 15px 20px;
+					border: none;
+                    font-weight: bold;
+                    // margin: 20px;
+                    background-color: #0b71de;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: yellow;
+                        color: black;
+                    }
+				}
+			}
+		}
+	}
+	.reviewSection {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin: 100px 20px 100px 20px;
+		gap: 20px;
+		.commentCard {
+			display: flex;
+			align-items: center;
+			.commenterImg {
+				max-width: 100px;
+				max-height: 100px;
+				border-radius: 50%;
+			}
+			.commentInfoCard {
+				display: grid;
+				align-content: space-between;
+				// outline: 3px solid rgb(35, 46, 49);
+				background-color: rgba(208, 198, 198, 0.634);
+				border-radius: 20px;
+				position: relative;
+				margin-left: 30px;
+				padding: 10px 5px 5px 25px;
+				p {
+					padding: 0px;
+					margin: 5px;
+				}
+				.dote {
+					top: 32%;
+					left: -16px;
+					position: absolute;
+					height: 2em;
+					width: 2em;
+					background-color: rgb(208, 198, 198);
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
