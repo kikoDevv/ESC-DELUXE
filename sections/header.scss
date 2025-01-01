@@ -1,0 +1,83 @@
+.header {
+	background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+	background-size: 300% 300%;
+	animation: colorAnimation 8s ease-in-out infinite;
+	padding-bottom: 30px;
+	.head-title {
+		display: flex;
+		gap: 20px;
+		.logoContainer {
+			margin: 30px 0px 0px 30px;
+			user-select: none;
+			outline: 3px solid white;
+			max-width: fit-content;
+			display: flex;
+			gap: 5px;
+			padding: 3em 4em 0.5em 0.5em;
+			border-radius: 10px;
+			p {
+				padding: 10px;
+				background-color: aqua;
+				margin: 0px;
+				border-radius: 10px;
+			}
+		}
+		.title {
+			margin-top: 30px;
+		}
+	}
+	.navContainer {
+		user-select: none;
+		display: flex;
+		justify-content: space-evenly;
+		background: linear-gradient(45deg, #2dffe5, #89ff00, #0b71de, #dc2a54);
+		background-size: 300% 300%;
+		animation: colorAnimation 4s ease-in-out infinite;
+		margin: 30px 30px 0px 30px;
+		border-radius: 10px;
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			position: relative;
+			z-index: 0;
+			padding: 10px 0px;
+			cursor: pointer;
+			&:hover {
+				color: white;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -2px;
+				width: 100%;
+				height: 100%;
+				border-top: 2px solid white;
+				border-bottom: 2px solid white;
+				transform: scaleY(2);
+				opacity: 0;
+				transition: transform 0.5s, opacity 0.5s;
+				z-index: -1;
+			}
+
+			&:hover::before {
+				transform: scaleY(1);
+				opacity: 1;
+			}
+		}
+	}
+	//----------animation-Header--------
+	@keyframes colorAnimation {
+		0% {
+			background-position: 0 20%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0 50%;
+		}
+	}
+}
+//-------------------main-------------------
+
