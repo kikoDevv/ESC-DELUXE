@@ -1,21 +1,54 @@
-.main {
-	.cardSection {
-		margin: 20px;
-		.card {
-			background-color: aquamarine;
-			max-width: fit-content;
-			.cardImg {
-				max-width: 30vw;
-			}
-			.cardInfo {
-				display: grid;
-				padding: 3px 10px 10px 10px;
-				.cardName {
-					margin: 0px;
+.cardSection{
+	margin: 50px;
+	display: grid;
+	outline: 3px solid red;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 10px;
+	justify-content: center;
+	.card{
+		user-select: none;
+		display: grid;
+		background-color: #20E2D7;
+		max-width: fit-content;
+		overflow: hidden;
+		border-radius: 15px;
+		.cardImg{
+			max-width: 400px;
+		}
+		.cardInfo{
+			padding: 0px 10px 10px 10px;
+			display: grid;
+			.name-tag{
+				display: flex;
+				justify-content: space-between;
+				.cardName{
 					font-weight: bold;
 				}
-				.stars-participents {
-					background-color: red;
+			}
+			.stars-participents{
+				display: flex;
+				justify-content: space-between;
+				.participants{
+					margin: 0px;
+				}
+			}
+			.des{
+				width: 360px;
+				.cardDescription{
+					overflow-wrap: break-word;
+				}
+			}
+			.cardBtn{
+				padding: 10px 20px;
+				place-self: center;
+				justify-self: center;
+				cursor: pointer;
+				border: none;
+				border-radius: 10px;
+				background-color: #F8FFF8;
+				&:hover{
+					background-color: chartreuse;
+					color: white;
 				}
 			}
 		}

@@ -78,6 +78,9 @@
   }
 }
 
+.main .titlePopular {
+  place-self: center;
+}
 .main .upperSection img {
   max-width: 100%;
 }
@@ -144,26 +147,61 @@
   border-radius: 50%;
 }
 
-.main .cardSection {
-  margin: 20px;
-}
-.main .cardSection .card {
-  background-color: aquamarine;
-  max-width: fit-content;
-}
-.main .cardSection .card .cardImg {
-  max-width: 30vw;
-}
-.main .cardSection .card .cardInfo {
+.cardSection {
+  margin: 50px;
   display: grid;
-  padding: 3px 10px 10px 10px;
+  outline: 3px solid red;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 10px;
+  justify-content: center;
 }
-.main .cardSection .card .cardInfo .cardName {
-  margin: 0px;
+.cardSection .card {
+  user-select: none;
+  display: grid;
+  background-color: #20E2D7;
+  max-width: fit-content;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.cardSection .card .cardImg {
+  max-width: 400px;
+}
+.cardSection .card .cardInfo {
+  padding: 0px 10px 10px 10px;
+  display: grid;
+}
+.cardSection .card .cardInfo .name-tag {
+  display: flex;
+  justify-content: space-between;
+}
+.cardSection .card .cardInfo .name-tag .cardName {
   font-weight: bold;
 }
-.main .cardSection .card .cardInfo .stars-participents {
-  background-color: red;
+.cardSection .card .cardInfo .stars-participents {
+  display: flex;
+  justify-content: space-between;
+}
+.cardSection .card .cardInfo .stars-participents .participants {
+  margin: 0px;
+}
+.cardSection .card .cardInfo .des {
+  width: 360px;
+}
+.cardSection .card .cardInfo .des .cardDescription {
+  overflow-wrap: break-word;
+}
+.cardSection .card .cardInfo .cardBtn {
+  padding: 10px 20px;
+  place-self: center;
+  justify-self: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #F8FFF8;
+}
+.cardSection .card .cardInfo .cardBtn:hover {
+  background-color: chartreuse;
+  color: white;
 }
 
 body {
