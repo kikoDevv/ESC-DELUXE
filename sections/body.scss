@@ -1,56 +1,222 @@
-.cardSection{
+.cardSection {
 	margin: 50px;
 	display: grid;
-	outline: 3px solid red;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	gap: 10px;
 	justify-content: center;
-	.card{
+	.card {
+		cursor: pointer;
+		box-shadow: black 0px 0px 5px 0.2px;
 		user-select: none;
 		display: grid;
-		background-color: #20E2D7;
+		background-color: #20e2d7;
 		max-width: fit-content;
 		overflow: hidden;
 		border-radius: 15px;
-		.cardImg{
+		animation: scaleIt 0.3s ease-in-out;
+		transition: transform 0.3s ease-in-out;
+		&:hover {
+			box-shadow: yellowgreen 0px 0px 10px 0.9px;
+			transform: scale(1.03);
+		}
+		.cardImg {
 			max-width: 100%;
 		}
-		.cardInfo{
+		.cardInfo {
 			padding: 0px 10px 10px 10px;
 			display: grid;
-			.name-tag{
+			.name-tag {
 				display: flex;
 				justify-content: space-between;
-				.cardName{
+				.cardName {
 					font-weight: bold;
 				}
 			}
-			.stars-participents{
+			.stars-participents {
 				display: flex;
 				justify-content: space-between;
-				.participants{
+				.participants {
 					margin: 0px;
 				}
 			}
-			.des{
-				width: 360px;
-				.cardDescription{
+			.des {
+				width: 400px;
+				.cardDescription {
 					overflow-wrap: break-word;
 				}
 			}
-			.cardBtn{
+			.cardBtn {
 				padding: 10px 20px;
 				place-self: center;
 				justify-self: center;
 				cursor: pointer;
 				border: none;
 				border-radius: 10px;
-				background-color: #F8FFF8;
-				&:hover{
+				background-color: #f8fff8;
+				&:hover {
 					background-color: chartreuse;
 					color: white;
 				}
 			}
+		}
+	}
+}
+//------------------animation for movie cards
+
+//--------------------------buttons group--------
+.btnGroupMid {
+	margin: 100px 0px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	button {
+		padding: 15px 30px;
+		border: none;
+		border-radius: 10px;
+		background-color: white;
+		color: black;
+		font-weight: bold;
+		box-shadow: black 0px 0px 3px 0.5px;
+		cursor: pointer;
+		&:hover {
+			box-shadow: blue 0px 0px 8px 3px;
+			color: blue;
+		}
+	}
+}
+.storySection {
+	display: grid;
+	hr {
+		margin: 20px 0px;
+		border: 0.2px solid #000;
+		display: grid;
+	}
+	h2 {
+		place-self: center;
+	}
+	p {
+		margin: 0px 50px;
+		padding: 20px;
+	}
+	button {
+		place-self: center;
+		padding: 10px 20px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+}
+.lowerSection {
+	.containerUp {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		img {
+			max-width: 100%;
+		}
+		.infoContainer {
+			padding: 50px;
+			display: grid;
+			align-content: space-between;
+			background-color: #20e2d7;
+			border-radius: 0px 50px 0px 0px;
+			.bookBtn {
+				padding: 10px 20px;
+				max-width: fit-content;
+				border: none;
+				border-radius: 10px;
+				background-color: white;
+				cursor: pointer;
+				font-weight: bold;
+				box-shadow: black 0px 0px 1px 0.5px;
+				justify-self: center;
+				&:hover {
+					background-color: aqua;
+					color: white;
+				}
+			}
+		}
+	}
+	.containerDown {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		img {
+			max-width: 100%;
+		}
+		.infoContainer {
+			padding: 50px;
+			display: grid;
+			align-content: space-between;
+			background-color: #20e2d7;
+			border-radius: 0px 0px 0px 50px;
+			.bookBtn {
+				padding: 10px 20px;
+				max-width: fit-content;
+				border: none;
+				border-radius: 10px;
+				background-color: white;
+				cursor: pointer;
+				font-weight: bold;
+				box-shadow: black 0px 0px 1px 0.5px;
+				justify-self: center;
+				&:hover {
+					background-color: aqua;
+					color: white;
+				}
+			}
+		}
+	}
+}
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px 0;
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+		.footer-section {
+			flex: 1;
+			min-width: 200px;
+			margin: 10px 0;
+			h3 {
+				margin-bottom: 10px;
+			}
+			p,
+			ul,
+			a {
+				color: #fff;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+				li {
+					margin: 5px 0;
+				}
+				a {
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			.social a {
+				margin-right: 10px;
+				color: #fff;
+				font-size: 1.5em;
+				&:hover {
+					color: #20e2d7;
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		text-align: center;
+		padding: 10px 0;
+		border-top: 1px solid #444;
+		p {
+			margin: 0;
 		}
 	}
 }
