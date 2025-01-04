@@ -83,6 +83,7 @@
 }
 .main .upperSection img {
   max-width: 100%;
+  min-width: 100%;
 }
 .main .upperSection .btnGroup {
   display: flex;
@@ -164,7 +165,7 @@
   border-radius: 15px;
 }
 .cardSection .card .cardImg {
-  max-width: 400px;
+  max-width: 100%;
 }
 .cardSection .card .cardInfo {
   padding: 0px 10px 10px 10px;
