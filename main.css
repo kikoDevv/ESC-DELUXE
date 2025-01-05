@@ -164,8 +164,7 @@
   max-width: fit-content;
   overflow: hidden;
   border-radius: 15px;
-  animation: scaleIt 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 }
 .cardSection .card:hover {
   box-shadow: yellowgreen 0px 0px 10px 0.9px;
