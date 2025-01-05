@@ -188,6 +188,9 @@
   display: flex;
   justify-content: space-between;
 }
+.cardSection .card .cardInfo .stars-participents .starsContainer i {
+  color: yellow;
+}
 .cardSection .card .cardInfo .stars-participents .participants {
   margin: 0px;
 }

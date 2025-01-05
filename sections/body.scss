@@ -34,6 +34,11 @@
 			.stars-participents {
 				display: flex;
 				justify-content: space-between;
+				.starsContainer{
+					i{
+						color: yellow;
+					}
+				}
 				.participants {
 					margin: 0px;
 				}
