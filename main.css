@@ -572,14 +572,15 @@
 
 .filterBtn {
   position: absolute;
-  padding: 12px 20px;
+  top: 300px;
+  left: 45%;
   border: none;
+  cursor: pointer;
+  padding: 12px 20px;
   background-color: white;
   border: 1.5px solid blue;
   border-radius: 12px;
-  cursor: pointer;
-  top: 300px;
-  left: 45%;
+  animation: faidIn 0.3s ease-in-out;
 }
 .filterBtn:hover {
   background-color: blueviolet;
@@ -587,6 +588,35 @@
   border: 1.5px solid blueviolet;
 }
 
+.filterOpenBtn {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(243, 215, 215);
+  color: red;
+  opacity: 0;
+  animation: faidInn 0.3s ease-in-out forwards;
+  animation-delay: 0.4s;
+  cursor: pointer;
+}
+.filterOpenBtn:hover {
+  background-color: red;
+  color: white;
+}
+
+@keyframes faidInn {
+  from {
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 .filterSection.active {
   display: grid;
 }
@@ -604,6 +634,7 @@
   margin: 100px 200px;
   box-shadow: #101827 0px 0px 4px 0.08px;
   user-select: none;
+  animation: faidIn 0.3s ease-in-out;
 }
 .filterSection #btnCloseFilter {
   background: 0px;
@@ -614,13 +645,12 @@
   color: red;
 }
 .filterSection .containerHead {
-  display: flex;
-  flex: none;
-  justify-content: space-between;
   margin-bottom: 40px;
+  justify-content: center;
 }
 .filterSection .containerHead p {
-  margin: 0px;
+  place-self: center;
+  margin: 20px;
   padding: 0px;
 }
 .filterSection .filterContainer {
@@ -680,6 +710,14 @@
   color: white;
 }
 
+@keyframes faidIn {
+  from {
+    scale: 0.5;
+  }
+  to {
+    scale: 1;
+  }
+}
 body {
   margin: 0px;
   padding: 0px;
