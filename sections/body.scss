@@ -53,6 +53,7 @@
 				border-radius: 10px;
 				background-color: #f8fff8;
 				box-shadow: black 0px 0px 2px 0.6px;
+				font-weight: bold;
 				&:hover {
 					box-shadow: black 0px 0px 0px 0px;
 					background-color: chartreuse;
@@ -106,6 +107,9 @@
 	}
 }
 .lowerSection {
+	margin: 0px 10px 10px 10px;
+	overflow: hidden;
+	border-radius: 50px;
 	.containerUp {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -117,19 +121,18 @@
 			display: grid;
 			align-content: space-between;
 			background-color: #20e2d7;
-			border-radius: 0px 50px 0px 0px;
 			.bookBtn {
 				padding: 10px 20px;
-				max-width: fit-content;
+				place-self: center;
+				justify-self: center;
+				cursor: pointer;
 				border: none;
 				border-radius: 10px;
-				background-color: white;
-				cursor: pointer;
-				font-weight: bold;
-				box-shadow: black 0px 0px 1px 0.5px;
-				justify-self: center;
+				background-color: #f8fff8;
+				box-shadow: black 0px 0px 2px 0.6px;
 				&:hover {
-					background-color: aqua;
+					box-shadow: black 0px 0px 0px 0px;
+					background-color: chartreuse;
 					color: white;
 				}
 			}
@@ -146,19 +149,18 @@
 			display: grid;
 			align-content: space-between;
 			background-color: #20e2d7;
-			border-radius: 0px 0px 0px 50px;
 			.bookBtn {
 				padding: 10px 20px;
-				max-width: fit-content;
+				place-self: center;
+				justify-self: center;
+				cursor: pointer;
 				border: none;
 				border-radius: 10px;
-				background-color: white;
-				cursor: pointer;
-				font-weight: bold;
-				box-shadow: black 0px 0px 1px 0.5px;
-				justify-self: center;
+				background-color: #f8fff8;
+				box-shadow: black 0px 0px 2px 0.6px;
 				&:hover {
-					background-color: aqua;
+					box-shadow: black 0px 0px 0px 0px;
+					background-color: chartreuse;
 					color: white;
 				}
 			}

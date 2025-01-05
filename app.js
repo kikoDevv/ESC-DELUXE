@@ -19,11 +19,12 @@ async function fetchData() {
         const topRatedChallenges = sortedChallenges.slice(0, 3);
         //---------create card-----------
         topRatedChallenges.forEach(challenge => {
-            generateMovieCard(
+            generateCard(
                 challenge.image,
                 challenge.title,
                 challenge.type,
                 challenge.rating,
+                challenge.minParticipants,
                 challenge.maxParticipants,
                 challenge.description
             );
@@ -34,7 +35,7 @@ async function fetchData() {
 }
 
 //--------------func to create movie card-----------------
-function generateMovieCard(img, name, tag, stars, participants, desc) {
+function generateCard(img, name, tag, stars, minParti, maxPari, desc) {
     const cardSection = document.querySelector(".cardSection");
 
     const card = document.createElement("div");
@@ -80,7 +81,7 @@ function generateMovieCard(img, name, tag, stars, participants, desc) {
 
     const participantsP = document.createElement("p");
     participantsP.className = "participants";
-    participantsP.textContent = participants;
+    participantsP.textContent = `${minParti} - ${maxPari}`;
 
     starsParticipants.appendChild(starsContainer);
     starsParticipants.appendChild(participantsP);
