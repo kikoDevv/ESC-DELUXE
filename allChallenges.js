@@ -1,4 +1,14 @@
 const allCardSection = document.querySelector(".cardSection");
+const filterBtn = document.querySelector(".filterBtn");
+const filterMenu = document.querySelector(".filterSection");
+filterBtn.addEventListener("click", () => {
+	filterMenu.classList.toggle("active");
+});
+
+
+
+
+
 
 async function fetchData() {
 	try {
@@ -29,6 +39,18 @@ async function fetchData() {
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+//--------------func to generate card----------------
 function generateCard(img, name, tag, stars, minPar, maxPar, desc) {
 	const starsHTML = generateStars(stars);
 
@@ -68,6 +90,4 @@ function generateStars(stars) {
 	}
 	return starsHTML;
 }
-
-// Call fetchData to log data to console and generate cards
 fetchData();
