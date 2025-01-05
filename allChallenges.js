@@ -1,9 +1,12 @@
 const allCardSection = document.querySelector(".cardSection");
 const filterBtn = document.querySelector(".filterBtn");
 const filterMenu = document.querySelector(".filterSection");
+const tagsContainer = document.querySelector(".tagsContainer");
+
+//-------------filter menu-----------------
 filterBtn.addEventListener("click", () => {
 	filterMenu.classList.toggle("active");
-	if(filterMenu.classList.contains("active")){
+	if (filterMenu.classList.contains("active")) {
 		console.log("is active");
 		filterBtn.textContent = "";
 		filterBtn.classList.remove("filterBtn");
@@ -11,18 +14,20 @@ filterBtn.addEventListener("click", () => {
 		filterBtn.classList.add("fa-2xl");
 		filterBtn.classList.add("fa-solid");
 		filterBtn.classList.add("fa-xmark");
-	} else{
+	} else {
 		filterBtn.textContent = "Filter challenges";
-		filterBtn.classList.remove("filterOpenBtn", "fa-2xl", "fa-solid", "fa-xmark");
+		filterBtn.classList.remove(
+			"filterOpenBtn",
+			"fa-2xl",
+			"fa-solid",
+			"fa-xmark"
+		);
 		filterBtn.classList.add("filterBtn");
 	}
 });
+//-----------------
 
-
-
-
-
-
+//-------------fetch data and create card---------
 async function fetchData() {
 	try {
 		const response = await fetch(
@@ -34,7 +39,15 @@ async function fetchData() {
 		const data = await response.json();
 		console.log(data);
 		console.log(`Length of data: ${data.challenges.length}`);
-
+		//--------collect tags--------
+		const allLabels = [
+			...new Set(data.challenges.flatMap((challenge) => challenge.labels)),
+		];
+		console.log("All labels:", allLabels);
+		//-------cerate tags-----------
+		allLabels.forEach((allLabels) =>{
+			createTag(allLabels);
+		});
 		//---------create card-----------
 		data.challenges.forEach((challenge) => {
 			generateCard(
@@ -51,6 +64,7 @@ async function fetchData() {
 		console.error(error);
 	}
 }
+//--------------------
 
 
 
@@ -63,6 +77,20 @@ async function fetchData() {
 
 
 
+
+
+
+
+
+
+
+
+//--------------func to create tags-----------------
+function createTag(tagName) {
+	const tagBtn = document.createElement("button");
+	tagBtn.textContent = tagName;
+	tagsContainer.appendChild(tagBtn);
+}
 //--------------func to generate card----------------
 function generateCard(img, name, tag, stars, minPar, maxPar, desc) {
 	const starsHTML = generateStars(stars);
