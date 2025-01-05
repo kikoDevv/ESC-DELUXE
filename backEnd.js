@@ -11,15 +11,21 @@ async function fetchData() {
         const data = await response.json();
         console.log(data);
         console.log(`Length of data: ${data.challenges.length}`);
+
+        // Sort challenges by rating in descending order
+        const sortedChallenges = data.challenges.sort((a, b) => b.rating - a.rating);
+
+        // Get the top-rated challenges (e.g., top 5)
+        const topRatedChallenges = sortedChallenges.slice(0, 3);
         //---------create card-----------
-        data.challenges.forEach(challenge => {
+        topRatedChallenges.forEach(challenge => {
             generateMovieCard(
-                challenge.image, // Assuming the image URL is in the 'image' property
-                challenge.title, // Assuming the title is in the 'title' property
-                challenge.type, // Assuming the type is in the 'type' property
-                challenge.rating, // Assuming the rating is in the 'rating' property
-                challenge.maxParticipants, // Assuming the max participants is in the 'maxParticipants' property
-                challenge.description // Assuming the description is in the 'description' property
+                challenge.image,
+                challenge.title,
+                challenge.type,
+                challenge.rating,
+                challenge.maxParticipants,
+                challenge.description
             );
         });
     } catch (error) {
@@ -27,6 +33,7 @@ async function fetchData() {
     }
 }
 
+//--------------func to create movie card-----------------
 function generateMovieCard(img, name, tag, stars, participants, desc) {
     const cardSection = document.querySelector(".cardSection");
 

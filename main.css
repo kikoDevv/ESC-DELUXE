@@ -152,7 +152,7 @@
   margin: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
 }
 .cardSection .card {
@@ -167,7 +167,7 @@
   transition: transform 0.1s ease-in-out;
 }
 .cardSection .card:hover {
-  box-shadow: yellowgreen 0px 0px 10px 0.9px;
+  box-shadow: red 0px 0px 10px 2px;
   transform: scale(1.03);
 }
 .cardSection .card .cardImg {
@@ -205,8 +205,10 @@
   border: none;
   border-radius: 10px;
   background-color: #f8fff8;
+  box-shadow: black 0px 0px 2px 0.6px;
 }
 .cardSection .card .cardInfo .cardBtn:hover {
+  box-shadow: black 0px 0px 0px 0px;
   background-color: chartreuse;
   color: white;
 }
